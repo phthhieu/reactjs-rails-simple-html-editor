@@ -4,7 +4,7 @@
     @_updateDefaultValue()
 
   render: ->
-    R.div
+    React.DOM.div
       className: 'simple-html-editor-widget'
       @_renderTextArea()
       @_renderControls()
@@ -22,19 +22,19 @@
     @_iframeDocument().body.innerHTML = ''
 
   _renderTextArea: ->
-    R.textarea
+    React.DOM.textarea
       ref: 'textArea'
       style:
         display: 'none'
 
   _renderControls: ->
-    R.div
+    React.DOM.div
       style:
         background: '#D2D2D2'
         color: '#666666'
         fontSize: 14
         fontWeight: 700
-      R.input
+      React.DOM.input
         type: 'button'
         value: 'B'
         onClick: @_iBold
@@ -44,7 +44,7 @@
           border: 0
           padding: '3px 10px'
           fontFamily: 'Helvetica Neue, arial, sans-serif'
-      R.input
+      React.DOM.input
         type: 'button'
         value: 'I'
         onClick: @_iItalic
@@ -56,14 +56,14 @@
           fontStyle: 'italic'
           fontWeight: 300
           fontFamily: 'Georgia, arial, sans-serif'
-      R.input
+      React.DOM.input
         onClick: @_iOrderedList
         tabIndex: '12'
         style:
           padding: 6
           verticalAlign: 'middle'
         'OL'
-      R.input
+      React.DOM.input
         href: '#'
         onClick: @_iUnorderedList
         tabIndex: '13'
@@ -71,8 +71,9 @@
           padding: 6
           verticalAlign: 'middle'
         'UL'
+
   _renderIFrame: ->
-    R.iframe
+    React.DOM.iframe
       ref: 'iframe'
       style:
         border: 0
