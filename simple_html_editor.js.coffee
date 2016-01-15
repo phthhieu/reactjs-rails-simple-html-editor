@@ -30,8 +30,8 @@
   _renderControls: ->
     R.div
       style:
-        background: AT.CSS_UTIL.backgroundColor3
-        color: AT.CSS_UTIL.greyTextColor
+        background: '#D2D2D2'
+        color: '#666666'
         fontSize: 14
         fontWeight: 700
       R.input
@@ -78,7 +78,7 @@
         border: 0
         width: '100%'
         height: 116
-        background: AT.CSS_UTIL.backgroundColor
+        background: '#F2F2F2'
 
   _turnOnDesignMode: ->
     @_iframeDocument().designMode = 'On'
